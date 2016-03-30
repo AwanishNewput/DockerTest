@@ -36,9 +36,10 @@ RUN apt-get update && \
 RUN apt-get update && apt-get install -y maven \
 vim 
 
-VOLUME  ["/Users/vipinjoshi/Documents/workspace/NSampleAuth","/var/src"]
+VOLUME  ["/DockerTest/NSampleAuth","/var/src"]
 
 ## Prepare by downloading dependencies
+#WORKDIR /Users/vipinjoshi/Documents/workspace/NSampleAuth
 ADD ./pom.xml /var/src/pom.xml  
 WORKDIR /var/src
 
